@@ -1,0 +1,6 @@
+# Paths to training and validation data files
+train: data/df_train.tsv
+val: data/df_valid.tsv
+
+nc: 1                          # Only one class: barcode
+names: ['barcode']             # List of class names (single class)

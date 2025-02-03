@@ -1,0 +1,5 @@
+outs:
+- md5: 07907e5ad3e1db8ec15d280fbc3acdb0
+  size: 28499072
+  hash: md5
+  path: best_model_yolov5.onnx

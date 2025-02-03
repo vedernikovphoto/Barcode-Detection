@@ -1,0 +1,42 @@
+project_name: 'Barcodes_Detection'                    
+experiment_name: 'experiment1'
+n_epochs: 350
+accelerator: 'gpu'
+device: 0
+seed: 42
+log_every_n_steps: 50
+iou_thres: 0.6
+conf_thres: 0.005
+monitor_metric: 'val_map'
+monitor_mode: 'max'
+
+model_kwargs:
+  model_name: 'yolov5s'
+  pretrained: true
+
+optimizer: 'torch.optim.AdamW'
+optimizer_kwargs:
+  lr: 1e-4
+  weight_decay: 1e-5
+
+scheduler: 'torch.optim.lr_scheduler.CosineAnnealingLR'
+scheduler_kwargs:
+  T_max: 10
+  eta_min: 1e-5
+
+data_config:
+  data_path: 'data'
+  data_config_path: 'config/data.yaml'
+  batch_size: 8  # Adjust as needed
+  n_workers: 0
+  train_size: 0.8
+  width: 640  # Adjust based on YOLOv5 requirements
+  height: 640
+  input_size: [3, 640, 640]  
+
+augmentation_params:
+  hue_shift_limit: 20
+  sat_shift_limit: 30
+  val_shift_limit: 20
+  brightness_limit: 0.2
+  contrast_limit: 0.2

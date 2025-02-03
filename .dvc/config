@@ -1,0 +1,8 @@
+[core]
+    remote = alexander_vedernikov_remote
+[cache]
+    type = "hardlink,symlink"
+['remote "alexander_vedernikov_remote"']
+    url = ssh://91.206.15.25/home/a.vedernikov/dvc_files
+    user = a.vedernikov
+    keyfile = C:\Users\35844\Desktop\key_rsa

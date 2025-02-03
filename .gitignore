@@ -1,0 +1,8 @@
+/test_file.py
+venv/
+data/
+experiments/
+lightning_logs/
+src/__pycache__/
+.vscode/
+output_images/
